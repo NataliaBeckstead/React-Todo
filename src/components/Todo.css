@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Caveat|Cinzel&display=swap');
+
+* {
+    font-family: 'Cinzel', serif;
+}
+
+h2{
+    text-align: center;
+    margin-top: 50px;
+}
+
+p{
+    font-size: 1.4rem;
+    font-family: 'Caveat', cursive;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    align-items: center;
+}
+
+input{
+    margin: 2%;
+    font-size: 1.3rem;
+    padding: 5px;
+    width: 700px;
+    text-align: center;
+}
+
+button{
+    font-size: 1.3rem;
+    padding: 5px;
+    width: 700px;
+    
+}
+
+.taskContainer{
+    height: 500px;
+    width: 40%;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-evenly;
+    background-color: lightgray;
+}
+
+.toDoContainer{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stricken{
+    text-decoration: line-through;
+}
