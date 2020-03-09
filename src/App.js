@@ -16,8 +16,19 @@ class App extends React.Component {
     }
   }
 
-
-  data = JSON.parse(localStorage.getItem('data')) ? [...JSON.parse(localStorage.getItem('data')).slice(0)] : []
+  data = [
+    {
+      task: 'Organize Garage',
+      id: 1528817077286,
+      completed: false
+    },
+    {
+      task: 'Bake Cookies',
+      id: 1528817084358,
+      completed: false
+    }
+  ];
+  //data = JSON.parse(localStorage.getItem('data')) ? [...JSON.parse(localStorage.getItem('data')).slice(0)] : []
   searchData = this.data;
 
 
@@ -50,7 +61,7 @@ class App extends React.Component {
 
   handleSearch = e => {
     const search= e.target.value;
-    //this.handleChange(e)
+    this.handleChange(e)
     this.searchData = this.data.filter(datum => datum.task.includes(search))
     console.log(this.data)
   }
@@ -61,7 +72,7 @@ class App extends React.Component {
       <div>
         <h2>My ToDo List</h2>
         <div className='toDoContainer'>
-          {/* <Search handleSearch={this.handleSearch}/> */}
+          <Search handleSearch={this.handleSearch}/>
           <ToDoList data={this.searchData} handleClick={this.handleClick}/>
           <ToDoForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} handleRemove={this.handleRemove}/>
         </div>
